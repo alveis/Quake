@@ -16,17 +16,17 @@ public class EarthquakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_earthquake);
 
         //dummy earthquake locations
-        ArrayList<String> earthquake = new ArrayList<>();
-        earthquake.add("San Francisco");
-        earthquake.add("London");
-        earthquake.add("Tokyo");
-        earthquake.add("Mexico City");
-        earthquake.add("Moscow");
-        earthquake.add("Rio de Janeiro");
-        earthquake.add("Paris");
+        ArrayList<EarthQuake> earthquakes = new ArrayList<>();
+        earthquakes.add(new EarthQuake("7.2","San Francisco","february 2, 2016"));
+        earthquakes.add(new EarthQuake("6.1","London", "july 20, 2015"));
+        earthquakes.add(new EarthQuake("4.4","Tokyo", "may 1, 1970"));
+        earthquakes.add(new EarthQuake("5.2", "Mexico City", "jun 12, 1960"));
+        earthquakes.add(new EarthQuake("9.2", "Moscow", "aug 0, 1991"));
+        earthquakes.add(new EarthQuake("9.1","Rio de Janeiro","Jan 1, 2011"));
+        earthquakes.add(new EarthQuake("2.2","Paris","april 2, 2010"));
 
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
-        ArrayAdapter<String> adapter = new ArrayList<>(this, android.R.layout.simple_list_item_1, earthquake);
+        EarthquakeAdapter adapter = new EarthquakeAdapter(this,earthquakes);
         earthquakeListView.setAdapter(adapter);
     }
 }
