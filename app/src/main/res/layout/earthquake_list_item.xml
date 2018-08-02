@@ -25,6 +25,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        tools:text="MAr 6 2010"/>
+        tools:text="Mar 6 2010"/>
 
 </LinearLayout>
